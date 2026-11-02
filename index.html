@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery built with HTML, CSS and JavaScript.">
+  <title>Frame — Image Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Frame home"><span class="brand-mark">F.</span> frame</a>
+    <span class="top-note">A LITTLE COLLECTION OF BEAUTY</span>
+    <a class="top-link" href="#gallery">Explore <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> VISUAL JOURNAL / VOL. 01</div>
+      <h1>Moments worth<br><em>remembering.</em></h1>
+      <p>A curated collection of places, details, and little moments<br class="desktop-only"> that make the ordinary feel extraordinary.</p>
+      <a class="discover" href="#gallery">Discover the gallery <span>↓</span></a>
+      <div class="hero-decoration" aria-hidden="true">01</div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow dark"><span></span> THE COLLECTION</div>
+          <h2>Explore the <em>frames</em></h2>
+        </div>
+        <p class="photo-count"><strong id="visible-count">12</strong> photographs</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter gallery">
+        <button class="filter active" data-filter="all" aria-pressed="true">All frames <span>12</span></button>
+        <button class="filter" data-filter="nature" aria-pressed="false">Nature</button>
+        <button class="filter" data-filter="architecture" aria-pressed="false">Architecture</button>
+        <button class="filter" data-filter="lifestyle" aria-pressed="false">Lifestyle</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <button class="gallery-card tall" data-category="nature" data-index="0" aria-label="Open mountain landscape photograph">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Snow-capped mountain peaks beneath a clear sky" loading="lazy">
+          <span class="card-overlay"><span>Nature / 01</span><b>Beyond the peaks ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-index="1" aria-label="Open modern architecture photograph">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85" alt="Minimal white modern building" loading="lazy">
+          <span class="card-overlay"><span>Architecture / 02</span><b>Quiet geometry ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="lifestyle" data-index="2" aria-label="Open coffee photograph">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Coffee and breakfast on a table" loading="lazy">
+          <span class="card-overlay"><span>Lifestyle / 03</span><b>Slow mornings ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="nature" data-index="3" aria-label="Open ocean photograph">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Ocean waves rolling toward the shore" loading="lazy">
+          <span class="card-overlay"><span>Nature / 04</span><b>Ocean stories ↗</b></span>
+        </button>
+        <button class="gallery-card wide" data-category="architecture" data-index="4" aria-label="Open city architecture photograph">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=85" alt="Contemporary architecture viewed from below" loading="lazy">
+          <span class="card-overlay"><span>Architecture / 05</span><b>Lines of the city ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="nature" data-index="5" aria-label="Open forest photograph">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85" alt="Sunlight filtering through a green forest" loading="lazy">
+          <span class="card-overlay"><span>Nature / 06</span><b>Into the green ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="lifestyle" data-index="6" aria-label="Open interior photograph">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="Warm minimalist living room interior" loading="lazy">
+          <span class="card-overlay"><span>Lifestyle / 07</span><b>At home ↗</b></span>
+        </button>
+        <button class="gallery-card tall" data-category="nature" data-index="7" aria-label="Open desert photograph">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=85" alt="Golden desert dunes in the afternoon light" loading="lazy">
+          <span class="card-overlay"><span>Nature / 08</span><b>Golden silence ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-index="8" aria-label="Open architectural detail photograph">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85" alt="Sculptural modern building detail" loading="lazy">
+          <span class="card-overlay"><span>Architecture / 09</span><b>Form & light ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="lifestyle" data-index="9" aria-label="Open travel photograph">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=85" alt="Peaceful lake surrounded by mountains" loading="lazy">
+          <span class="card-overlay"><span>Lifestyle / 10</span><b>Somewhere new ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="nature" data-index="10" aria-label="Open flower photograph">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" alt="Soft pastel flowers in natural light" loading="lazy">
+          <span class="card-overlay"><span>Nature / 11</span><b>In full bloom ↗</b></span>
+        </button>
+        <button class="gallery-card" data-category="lifestyle" data-index="11" aria-label="Open desk photograph">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Bright creative workspace with a desk" loading="lazy">
+          <span class="card-overlay"><span>Lifestyle / 12</span><b>Creative hours ↗</b></span>
+        </button>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No photographs in this category yet.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">F.</span> frame</a><span>Made to collect the beautiful things.</span><span>© 2026 FRAME GALLERY</span></footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="close-lightbox" aria-label="Close image viewer">×</button>
+    <button class="lightbox-nav prev" id="prev-image" aria-label="Previous image">‹</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="">
+      <figcaption><span id="lightbox-caption"></span><span id="lightbox-number"></span></figcaption>
+    </figure>
+    <button class="lightbox-nav next" id="next-image" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
